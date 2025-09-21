@@ -105,10 +105,10 @@ int main(void)
 		  HAL_GPIO_WritePin(GPIOA, LED_GREEN_Pin, GPIO_PIN_SET);
 	  }
 	  else {
-	  		  HAL_GPIO_WritePin(GPIOA, LED_RED_Pin, GPIO_PIN_SET);
-	  		  HAL_GPIO_WritePin(GPIOA, LED_YELLOW_Pin, GPIO_PIN_SET);
-	  		  HAL_GPIO_WritePin(GPIOA, LED_GREEN_Pin, GPIO_PIN_RESET);
-	  	  }
+		  HAL_GPIO_WritePin(GPIOA, LED_RED_Pin, GPIO_PIN_SET);
+		  HAL_GPIO_WritePin(GPIOA, LED_YELLOW_Pin, GPIO_PIN_SET);
+		  HAL_GPIO_WritePin(GPIOA, LED_GREEN_Pin, GPIO_PIN_RESET);
+	  }
 	  n--;
 	  if (n == 0) n = 10;
 	  HAL_Delay(1000);
