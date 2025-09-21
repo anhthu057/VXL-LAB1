@@ -93,8 +93,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  static int n = 0;
-	  if (n == 0){
+	  static int n = 4;
+	  if (n == 4){
 		  HAL_GPIO_WritePin(GPIOA, LED_RED_Pin, GPIO_PIN_RESET);
 		  HAL_GPIO_WritePin(GPIOA, LED_YELLOW_Pin, GPIO_PIN_SET);
 	  }
@@ -102,8 +102,8 @@ int main(void)
 		  HAL_GPIO_WritePin(GPIOA, LED_RED_Pin, GPIO_PIN_SET);
 		  HAL_GPIO_WritePin(GPIOA, LED_YELLOW_Pin, GPIO_PIN_RESET);
 	  }
-	  n++;
-	  if (n == 4) n = 0;
+	  n--;
+	  if (n == 0) n = 4;
 	  HAL_Delay(1000);
     /* USER CODE END WHILE */
 
